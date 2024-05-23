@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📕 Biblioteca - Grossi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Biblioteca da Família Grossi</h1>
+        <ul id="menu-suspenso">
+            <li id="pesquisar">PESQUISAR</li>
+            <li id="adicionar">ADICIONAR</li>
+        </ul>
+    </header>
+
+    <main>
+        <section id="descricao">
+            <p>Esta página foi criada para que você possa pesquisar os livros presentes no acervo, a posição deles 
+            nas prateleiras e a situação deles. Caso o livro que queira esteja disponível, você deve modificar
+            o status do livro!
+            </p>
+        </section>
+        <section id="formulario-inicial">
+            <h2>O que deseja fazer?</h2>
+            <select id="escolha-inicial">
+                <option value="">Selecione</option>
+                <option value="pesquisa">Pesquisar no acervo</option>
+                <option value="adiciona">Adiciona um livro ao acervo</option>
+            </select>
+        </section>
+        <section id="formulario-pesquisa" class="oculto">
+            <p id="cancela">❌</p>
+            <h3>Pesquise por título, autor(es), data de aquisição, estante ou situação:</h3>
+            <input type="text" id="titulo-pesquisa" placeholder="Digite aqui"><button id="botao-pesquisa">Pesquisa</button>
+
+            <h3>Pesquise por gênero.</h3>
+            <select id="genero-seleciona">
+                <option value="">Selecione</option>
+                <option value="Atlas/Enciclopédia">Atlas/Enciclopédia</option>
+                <option value="Auto-ajuda">Auto-ajuda</option>
+                <option value="Aventura">Aventura</option>
+                <option value="Biografia">Biografia</option>
+                <option value="Dicionário">Dicionário</option>
+                <option value="Distopias">Distopias</option>
+                <option value="Especial">Especial</option>
+                <option value="Fantasia">Fantasia</option>
+                <option value="Ficção científica">Ficção científica</option>
+                <option value="Harry Potter">Harry Potter</option>
+                <option value="História">História</option>
+                <option value="Infantil">Infantil</option>
+                <option value="Infanto-juvenil">Infanto-juvenil</option>
+                <option value="Investigação">Investigação</option>
+                <option value="Literatura Nacional/Portuguesa">Literatura Nacional/Portuguesa</option>
+                <option value="Nerd">Nerd</option>
+                <option value="Religioso">Religioso</option>
+                <option value="Romance geral">Romance geral</option>
+                <option value="Românticos">Românticos</option>
+                <option value="Sociologia">Sociologia</option>            
+                <option value="Super-Heróis">Super-Heróis</option>
+                <option value="Terror/Horror">Terror/Horror</option>
+            </select>
+        </section>
+        <div id="resultados-livros" class="oculto">
+            <p id="cancela">❌</p>
+            <section id="livros-encontrados">
+            </section>
+            <section id="formulario-reserva" class="oculto">
+                <h3>Reserva de livro</h3>
+                <p id="livro-reserva"></p>
+
+                <article id="personal-information">
+                    <select id="name-selection">
+                        <option>Selecione</option>
+                        <option value="Alice">Alice</option>
+                        <option value="Gaby">Gaby</option>
+                        <option value="Marco">Marco</option>
+                        <option value="Marcone">Marcone</option>
+                        <option value="Túlio">Túlio</option>
+                    </select>
+                    <button id="confirma-reserva">Confirmar reserva</button>
+                    <p id="aviso"></p>
+                </article>
+            </section>
+            <section id="formulario-devolve" class="oculto">
+                <h3>Devolução de livro</h3>
+                <p id="livro-devolve"></p>
+    
+                <article id="personal-information">
+                    <button id="confirma-devolucao">Confirmar devolução</button>
+                    <p id="aviso-devolve"></p>
+                </article>
+            </section>        
+        </div>
+        
+        <section id="formulario-adiciona" class="oculto">
+            <h3>Para adicionar um livro ao catálogo, informe:</h3>
+
+            <label>Título<input type="text" placeholder="Título" id="titulo-adiciona"></label>
+            <label>Autor<input type="text" placeholder="Autor" id="autor-adiciona"></label>
+            <label>Gênero<select id="genero-adiciona">
+                <option>Selecione</option>
+                <option value="Atlas/Enciclopédia">Atlas/Enciclopédia</option>
+                <option value="Auto-ajuda">Auto-ajuda</option>
+                <option value="Aventura">Aventura</option>
+                <option value="Biografia">Biografia</option>
+                <option value="Dicionário">Dicionário</option>
+                <option value="Distopias">Distopias</option>
+                <option value="Especial">Especial</option>
+                <option value="Fantasia">Fantasia</option>
+                <option value="Ficção científica">Ficção científica</option>
+                <option value="Harry Potter">Harry Potter</option>
+                <option value="História">História</option>
+                <option value="Infantil">Infantil</option>
+                <option value="Infanto-juvenil">Infanto-juvenil</option>
+                <option value="Investigação">Investigação</option>
+                <option value="Literatura Nacional/Portuguesa">Literatura Nacional/Portuguesa</option>
+                <option value="Nerd">Nerd</option>
+                <option value="Religioso">Religioso</option>
+                <option value="Romance geral">Romance geral</option>
+                <option value="Românticos">Românticos</option>
+                <option value="Sociologia">Sociologia</option>            
+                <option value="Super-Heróis">Super-Heróis</option>
+                <option value="Terror/Horror">Terror/Horror</option>
+            </select></label>
+            <label>Estante<input type="text" id="estante-adiciona"></label>
+            <label>Data<input type="text" id="data-adiciona"></label>
+            <label>Situação<select id="situacao-adiciona">
+                <option>Selecione</option>
+                <option value="Alice">Na Estante</option>
+                <option value="Alice">Alice</option>
+                <option value="Gaby">Gaby</option>
+                <option value="Marco">Marco</option>
+                <option value="Marcone">Marcone</option>
+                <option value="Túlio">Túlio</option>
+            </select></label>
+            <button id="botao-adiciona">Adicionar</button>
+        </section>
+    </main>
+    <script src="biblioteca.js"></script>
+</body>
+</html>
