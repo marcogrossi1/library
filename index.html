@@ -8,21 +8,19 @@
 </head>
 <body>
     <header>
-        <h1>Biblioteca da Família Grossi</h1>
-        <ul id="menu-suspenso">
-            <li id="pesquisar">PESQUISAR</li>
-            <li id="adicionar">ADICIONAR</li>
-        </ul>
+        <img src="imgs/pngwing.com(1).png" id="icone" alt="Ícone biblioteca">
+        <section id="titulo">
+            <h1>Biblioteca da Família Grossi</h1>
+            <ul id="menu-suspenso">
+                <li id="pesquisar">PESQUISAR 🔎</li>
+                <li id="adicionar">ADICIONAR 📚</li>
+            </ul>
+        </section>
+        <img src="imgs/pngwing.com(1).png" id="icone" alt="Ícone biblioteca">
     </header>
 
     <main>
-        <section id="descricao">
-            <p>Esta página foi criada para que você possa pesquisar os livros presentes no acervo, a posição deles 
-            nas prateleiras e a situação deles. Caso o livro que queira esteja disponível, você deve modificar
-            o status do livro!
-            </p>
-        </section>
-        <section id="formulario-inicial">
+        <section id="formulario-inicial" class="oculto">
             <h2>O que deseja fazer?</h2>
             <select id="escolha-inicial">
                 <option value="">Selecione</option>
@@ -75,7 +73,7 @@
                         <option>Selecione</option>
                         <option value="Alice">Alice</option>
                         <option value="Gaby">Gaby</option>
-                        <option value="Marco">Marco</option>
+                        <option value="Tico">Tico</option>
                         <option value="Marcone">Marcone</option>
                         <option value="Túlio">Túlio</option>
                     </select>
@@ -95,49 +93,140 @@
         </div>
         
         <section id="formulario-adiciona" class="oculto">
-            <h3>Para adicionar um livro ao catálogo, informe:</h3>
+            <h3>Para adicionar um livro ao <br> catálogo, informe:</h3>
 
-            <label>Título<input type="text" placeholder="Título" id="titulo-adiciona"></label>
-            <label>Autor<input type="text" placeholder="Autor" id="autor-adiciona"></label>
-            <label>Gênero<select id="genero-adiciona">
-                <option>Selecione</option>
-                <option value="Atlas/Enciclopédia">Atlas/Enciclopédia</option>
-                <option value="Auto-ajuda">Auto-ajuda</option>
-                <option value="Aventura">Aventura</option>
-                <option value="Biografia">Biografia</option>
-                <option value="Dicionário">Dicionário</option>
-                <option value="Distopias">Distopias</option>
-                <option value="Especial">Especial</option>
-                <option value="Fantasia">Fantasia</option>
-                <option value="Ficção científica">Ficção científica</option>
-                <option value="Harry Potter">Harry Potter</option>
-                <option value="História">História</option>
-                <option value="Infantil">Infantil</option>
-                <option value="Infanto-juvenil">Infanto-juvenil</option>
-                <option value="Investigação">Investigação</option>
-                <option value="Literatura Nacional/Portuguesa">Literatura Nacional/Portuguesa</option>
-                <option value="Nerd">Nerd</option>
-                <option value="Religioso">Religioso</option>
-                <option value="Romance geral">Romance geral</option>
-                <option value="Românticos">Românticos</option>
-                <option value="Sociologia">Sociologia</option>            
-                <option value="Super-Heróis">Super-Heróis</option>
-                <option value="Terror/Horror">Terror/Horror</option>
-            </select></label>
-            <label>Estante<input type="text" id="estante-adiciona"></label>
-            <label>Data<input type="text" id="data-adiciona"></label>
-            <label>Situação<select id="situacao-adiciona">
-                <option>Selecione</option>
-                <option value="Alice">Na Estante</option>
-                <option value="Alice">Alice</option>
-                <option value="Gaby">Gaby</option>
-                <option value="Marco">Marco</option>
-                <option value="Marcone">Marcone</option>
-                <option value="Túlio">Túlio</option>
-            </select></label>
-            <button id="botao-adiciona">Adicionar</button>
+            <article id="perguntas-adiciona">
+                <p id="cancela">❌</p>
+                <label><em>Título</em> <input type="text" placeholder="Título" id="titulo-adiciona"></label>
+                <label><em>Autor</em> <input type="text" placeholder="Autor" id="autor-adiciona"></label>
+                <label><em>Data</em> <input type="text" id="data-adiciona" placeholder="Data"></label>
+                <label id="genero"><em>Gênero</em> <select id="genero-adiciona">
+                    <option>Selecione</option>
+                    <option value="Atlas/Enciclopédia">Atlas/Enciclopédia</option>
+                    <option value="Auto-ajuda">Auto-ajuda</option>
+                    <option value="Aventura">Aventura</option>
+                    <option value="Biografia">Biografia</option>
+                    <option value="Dicionário">Dicionário</option>
+                    <option value="Distopias">Distopias</option>
+                    <option value="Especial">Especial</option>
+                    <option value="Fantasia">Fantasia</option>
+                    <option value="Ficção científica">Ficção científica</option>
+                    <option value="Harry Potter">Harry Potter</option>
+                    <option value="História">História</option>
+                    <option value="Infantil">Infantil</option>
+                    <option value="Infanto-juvenil">Infanto-juvenil</option>
+                    <option value="Investigação">Investigação</option>
+                    <option value="Literatura Nacional/Portuguesa">Literatura Nacional/Portuguesa</option>
+                    <option value="Nerd">Nerd</option>
+                    <option value="Religioso">Religioso</option>
+                    <option value="Romance geral">Romance geral</option>
+                    <option value="Românticos">Românticos</option>
+                    <option value="Sociologia">Sociologia</option>            
+                    <option value="Super-Heróis">Super-Heróis</option>
+                    <option value="Terror/Horror">Terror/Horror</option>
+                </select></label>
+                <label><em>Estante</em> <select id="estante-adiciona">
+                    <option value="">Selecione</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C1">C1</option>
+                    <option value="C2">C2</option>
+                    <option value="D1">D1</option>
+                    <option value="D2">D2</option>
+                    <option value="D3">D3</option>
+                    <option value="D4">D4</option>
+                    <option value="D5">D5</option>
+                    <option value="E1">E1</option>
+                    <option value="E2">E2</option>
+                    <option value="E3">E3</option>
+                </select></label>
+                <label><em>Situação</em> <select id="situacao-adiciona">
+                    <option value="Na Estante">Na Estante</option>
+                    <option value="Alice">Alice</option>
+                    <option value="Gaby">Gaby</option>
+                    <option value="Marco">Marco</option>
+                    <option value="Marcone">Marcone</option>
+                    <option value="Túlio">Túlio</option>
+                </select></label>
+                <button id="botao-adiciona">Adicionar</button>
+            </article>
+        </section>
+        <section id="descricao">
+            <article id="boas-vinda">
+                <h2>
+                    Bem vindo!
+                </h2>
+                <p>
+                    Esta página foi criada com intuito de facilitar a organização e distribuição dos livros no
+                    escritório. Para isso, criamos um catálogo, com todos os livros da casa. Por meio dessa página,
+                    você pode fazer reservas, devoluções e adicionar livros ao catálogo.
+                </p>
+            </article>
+            <article id="regras">
+                <h2>Regras de uso</h2>
+                <ol>
+                    <li>
+                        Sempre que <strong>tirar um livro da estante</strong>, pesquise pelo nome dele na opção "PESQUISAR" e 
+                        <strong>registre a locação</strong> com seu nome. Lembre-se de confirmar a operação!
+                    </li>
+                    <li>
+                        Sempre que for <strong>devolver um livro</strong>, se <strong>atente à estante</strong> em que ele deve ser guardado.
+                    </li>
+                    <li>
+                        Para <strong>adicionar um livro</strong>, basta clicar na opção "ADICIONAR" e <strong>preencher o formulário</strong>
+                        com TÍTULO, AUTOR, DATA (preenchimento automático), GÊNERO, ESTANTE e SITUAÇÃO e confirmar
+                        a operação.
+                    </li>
+                </ol>
+            </article>
+            <article id="organizacao">
+                <h2>Organização dos livros</h2>
+                <p>
+                    No dia 24/05/2024, retiramos todos os livros do escritório, limpamos as prateleiras
+                    e os livros e os organizamos em 22 gêneros diferentes:
+                </p>
+                <ol id="lista-generos">
+                    <li>Atlas/Enciclopédia</li>
+                    <li>Auto-ajuda</li>
+                    <li>Aventura</li>
+                    <li>Biografia</li>
+                    <li>Dicionário</li>
+                    <li>Distopias</li>
+                    <li>Especial</li>
+                    <li>Fantasia</li>
+                    <li>Ficção Científica</li>
+                    <li>Harry Potter</li>
+                    <li>História</li>
+                    <li>Infantil</li>
+                    <li>Infanto-juvenil</li>
+                    <li>Investigação</li>
+                    <li>Literatura Nacional/Portuguesa</li>
+                    <li>Nerd</li>
+                    <li>Religioso</li>
+                    <li>Romance Geral</li>
+                    <li>Românticos</li>
+                    <li>Sociologia</li>
+                    <li>Super-Heróis</li>
+                    <li>Terror/Horror</li>
+                </ol>
+                <p>
+                    Os livros foram alocados em 12 estantes e, a cada uma, foi designada um nome:
+                    <img id="organizacao-img" src="imgs/organization.png" alt="Organização das prateleiras">
+                </p>
+                <p>
+                    Cada livro no catálogo deve ter uma estante indicada. É lá que o livro será encontrado se
+                    estiver disponível, e é lá que o livro deverá ser colocado quando for devolvido.
+                </p>
+                <p>
+                    Além dessas classificações, os livros estão catalogados por Autor, Título e Data. Lembre-se,
+                    sempre que comprar ou ganhar um livro, de escrever, dentro dele, a data. No momento do registro
+                    do livro no sistema, caso não seja informada a data, será atribuida a data do dia em que o livro
+                    foi registrado.
+                </p>
+            </article>
         </section>
     </main>
     <script src="biblioteca.js"></script>
 </body>
-</html>
+</html> 
+

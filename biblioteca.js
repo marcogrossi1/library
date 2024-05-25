@@ -148,6 +148,7 @@ for(let i = 0; i < cancelaEl.length; i++)
         formularioPesquisa.classList.add('oculto')
         formularioDevolve.classList.add('oculto')
         resultadosLivros.classList.add('oculto')
+        formularioAdiciona.classList.add('oculto')
         formularioInicial.value = ''
         avisoEl.innerHTML = ''
     })
@@ -181,7 +182,7 @@ const devolveLivros = () => {
             formularioInicial.value = ''
         }, 5000)
 
-        avisoEl.innerHTML = `Oi, ${livroEscolhido[0].Situação}, registramos sua devolução!`
+        avisoEl.innerHTML = `Oi, ${livroEscolhido[0].Situação}, registramos sua devolução!<br> ESTANTE: <em>${livroEscolhido[0].Estante}</em>`
     })
 }
 
