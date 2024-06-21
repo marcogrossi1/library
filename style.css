@@ -236,4 +236,13 @@ img {
         gap: 5px;
     }
 
+    #titulo-pesquisa, #botao-pesquisa, #genero-seleciona, #titulo-adiciona, 
+    #autor-adiciona, #data-adiciona, #genero-adiciona, #estante-adiciona, 
+    #situacao-adiciona, #botao-adiciona {
+        height: 50px;
+    }
+
+    #botao-adiciona {
+        width: 100%;
+    }
 }
