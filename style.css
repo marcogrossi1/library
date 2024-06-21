@@ -190,3 +190,50 @@ ol {
 img {
     width: 80%;
 }
+
+@media screen and (max-width: 900px) and (orientation: portrait) {
+    #descricao {
+        margin: 0;
+        padding: 5%;
+        border-radius: 0;
+    }
+
+    .livro-resultado-disp, .livro-resultado-indisp {
+        padding: 5%;
+        border: 1px solid black;
+        border-radius: 2%;
+        width: 80%;
+        margin: 1%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #livros-encontrados {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #formulario-adiciona {
+        display: flex;
+        flex-direction: column;
+        
+        align-items: center;
+    }
+
+    #botao-adiciona, #genero-adiciona, #estante-adiciona, #situacao-adiciona {
+        width: 60%;
+    }
+
+    #perguntas-adiciona {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+        gap: 5px;
+    }
+
+}

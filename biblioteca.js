@@ -134,7 +134,7 @@ const reservaLivros = () => {
             resultadosLivros.classList.add('oculto')
             formularioInicial.value = ''
             avisoEl.innerHTML = ''
-        }, 5000)
+        }, 3000)
 
         avisoEl.innerHTML = `Oi, ${nameSelectionEl.value}, registramos sua reserva!`
     })
@@ -179,8 +179,9 @@ const devolveLivros = () => {
             formularioReserva.classList.add('oculto')
             formularioPesquisa.classList.add('oculto')
             formularioDevolve.classList.add('oculto')
+            formularioAdiciona.classList.add('ocuto')
             formularioInicial.value = ''
-        }, 5000)
+        }, 3000)
 
         avisoEl.innerHTML = `Oi, ${livroEscolhido[0].Situação}, registramos sua devolução!<br> ESTANTE: <em>${livroEscolhido[0].Estante}</em>`
     })
@@ -230,6 +231,7 @@ const adicionaLivro = () => {
     if(dataAdiciona.value == '')
         dataAdiciona.value = adicionaData()
 
+    console.log(dataAdiciona.value)
 
     dado = {
         Título: tituloAdiciona.value,
@@ -239,6 +241,8 @@ const adicionaLivro = () => {
         Data: dataAdiciona.value,
         Situação: situacaoAdiciona.value
     }
+
+    document.querySelector('#aviso-adiciona').innerHTML = 'Livro adicionado ao acervo!'
 
     fetch(url, {
         method: 'POST',
@@ -261,4 +265,15 @@ const adicionaLivro = () => {
   .then((data) => console.log(data));
 }
 
-botaoAdicionaEl.addEventListener('click', () => adicionaLivro())
+botaoAdicionaEl.addEventListener('click', () => {
+    adicionaLivro()
+    
+    setTimeout(function() {
+        formularioReserva.classList.add('oculto')
+        formularioPesquisa.classList.add('oculto')
+        formularioDevolve.classList.add('oculto')
+        formularioAdiciona.classList.add('oculto')
+        resultadosLivros.classList.add('oculto')
+        formularioInicial.value = ''
+    }, 2000)
+})
